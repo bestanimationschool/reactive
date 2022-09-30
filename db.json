@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "title": "Ayush",
+      "body": "Dwarka",
+      "id": 1
+    },
+    {
+      "title": "Vasu",
+      "body": "South Extension",
+      "id": 2
+    },
+    {
+      "title": "Paras",
+      "body": "South Delhi",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

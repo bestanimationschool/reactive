@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="cols">
+            <h1>Reactive Form Validation</h1>
+            <form action="" [formGroup]="form" (ngSubmit)="submit()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" formControlName="name">
+                    <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['name'].errors && f['name'].errors['required']"> Name is required.</div>
+                        <div *ngIf="f['name'].errors && f['name'].errors['minlength']"> Name should be 3 characters.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" class="form-control" formControlName="email">
+                    <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                        <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter value email address.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="body">Body</label>
+                    <textarea type="text" id="body" class="form-control" formControlName="body"></textarea>
+                    <div *ngIf="f['body'].touched && f['body'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['body'].errors && f['body'].errors['required']">Email is required.</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
